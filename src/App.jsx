@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Card from './components/Card'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className='header'>
+    <h1>Resorts Lite</h1>
+    <hr className="divider"/>
+    </div>
+
+    <div className='Container'>
+      <Card 
+        image="src\assets\images\Lab-3-Images\1.jpg" 
+        country="Indonesia" 
+        location="Gili Air Hotel" 
+        rating="4.8" 
+        price="$589/night"
+      />
+
+      <Card 
+        image="src\assets\images\Lab-3-Images\2.jpg" 
+        country="Seychelles" 
+        location="Hilton Resort" 
+        rating="4.2" 
+        price="$629/night"
+      />
+
+      <Card 
+        image="src\assets\images\Lab-3-Images\3.jpg" 
+        country="US Virgin Islands" 
+        location="Goa Resort" 
+        rating="3.5" 
+        price="$485/night"
+      />
+
+      <Card 
+        image="src\assets\images\Lab-3-Images\4.jpg" 
+        country="Bahamas" 
+        location="Kuredu Resort" 
+        rating="4.1" 
+        price="$729/night"
+      />
+
+      <Card 
+        image="src\assets\images\Lab-3-Images\5.jpg" 
+        country="Mauritius" 
+        location="Trou D'eau Douce" 
+        rating="4.9" 
+        price="$877/night"
+      />
+
+      <Card 
+        image="src\assets\images\Lab-3-Images\6.jpg" 
+        country="Bermuda" 
+        location="Staniel Cay Hotel" 
+        rating="3.2" 
+        price="$365/night"
+      />
+
+    </div>
     </>
-  )
+  );
 }
 
 export default App
